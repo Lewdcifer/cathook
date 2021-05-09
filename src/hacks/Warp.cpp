@@ -227,7 +227,7 @@ bool shouldRapidfire()
 
     // Unless we are on a flamethrower, where we only want m2.
     if (LOCAL_W->m_iClassID() == CL_CLASS(CTFFlameThrower))
-        buttons_pressed = current_user_cmd && current_user_cmd->buttons & IN_ATTACK2;
+        buttons_pressed = current_user_cmd && current_user_cmd->buttons & (IN_ATTACK | IN_ATTACK2);
 
     if (g_pLocalPlayer->holding_sniper_rifle)
     {
